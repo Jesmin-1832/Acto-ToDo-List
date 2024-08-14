@@ -1,0 +1,208 @@
+body {
+  font-family: var(--font-family);
+}
+
+.RegisterDetails {
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+}
+
+.RegisterDetails .registerForm {
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px;
+  box-shadow: inset 0 0 2px 0 #cbcbcb;
+}
+
+.RegisterDetails .registerForm .loginLink {
+  position: absolute;
+  top: 6%;
+  left: 4%;
+  font-size: 20px;
+  color: black;
+}
+
+.RegisterDetails .registerForm h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.RegisterDetails .registerForm p {
+  color: #272727;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 5px 0 0 0;
+}
+
+.RegisterDetails .registerForm table tr td {
+  text-align: center;
+  position: relative;
+}
+
+.RegisterDetails .registerForm table .userImage {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.RegisterDetails .registerForm table .PhoneInputCountry {
+  margin-left: 5px;
+}
+
+.RegisterDetails .registerForm table .PhoneInputInput {
+  padding: 15px 10px !important;
+}
+
+.RegisterDetails .registerForm table input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 40px;
+  background-color: #fbfbfb;
+  border: 1px solid #cbcbcb;
+  border-radius: 10px;
+  outline: none;
+  caret-color: var(--button-color);
+}
+
+.RegisterDetails .registerForm table input::placeholder {
+  color: #bdbdbd;
+}
+
+.RegisterDetails .registerForm table .icon {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.RegisterDetails .registerForm table .show-hide {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.RegisterDetails .registerForm table .submitBtn {
+  margin: 10px 0 0 0;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.RegisterDetails .registerForm table .submitBtn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.RegisterDetails .avatar-upload {
+  position: relative;
+  max-width: 150px;
+  margin: 10px auto;
+}
+
+.RegisterDetails .avatar-upload .avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  z-index: 1;
+}
+
+.RegisterDetails .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+.RegisterDetails .avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.RegisterDetails .registerForm .removeImageBtn {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 16px !important;
+  position: absolute;
+  top: 55%;
+  right: 15%;
+  line-height: 24px !important;
+  background-color: black !important;
+  padding: 0;
+}
+
+.RegisterDetails .avatar-upload .avatar-edit input + label,
+.RegisterDetails .registerForm .removeImageBtn {
+  display: inline-block;
+  font-size: 22px;
+  width: 34px;
+  height: 34px;
+  line-height: 39px;
+  text-align: center;
+  margin-bottom: 0;
+  border-radius: 100%;
+  color: white;
+  background: var(--button-color);
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.RegisterDetails .avatar-upload .avatar-edit input + label:hover {
+  background: var(--button-hover-color);
+  border-color: black;
+}
+
+.RegisterDetails .avatar-upload .avatar-preview {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, rgb(122, 122, 122), white);
+  position: relative;
+  border-radius: 100%;
+  border: 2px solid #000000;
+  box-shadow: inset 0px 0px 10px 2px white;
+}
+
+
+
+
+/* Responsive  */
+
+
+@media (max-width:1024px) {
+  .RegisterDetails{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }  
+}
+@media (max-width:575px) {
+  .RegisterDetails{
+    width: 100%;
+  }
+  .RegisterDetails .registerForm{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }  
+}

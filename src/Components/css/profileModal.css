@@ -1,0 +1,312 @@
+.profileModal {
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+}
+
+.profileModal .ProfileForm {
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0 0 2px 0 #cbcbcb;
+}
+
+.profileModal .ProfileForm .closeLink {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.profileModal .ProfileForm table tr td {
+  text-align: center;
+  position: relative;
+}
+
+.profileModal .ProfileForm h3 {
+  text-align: center;
+}
+
+.profileModal .ProfileForm table .userImage {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.profileModal .ProfileForm table .PhoneInputCountry {
+  margin-left: 5px;
+}
+
+.profileModal .ProfileForm table .PhoneInputInput {
+  padding: 15px 10px !important;
+}
+
+.profileModal .ProfileForm table input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 40px;
+  background-color: #fbfbfb;
+  border: 1px solid #cbcbcb;
+  border-radius: 10px;
+  outline: none;
+  caret-color: var(--button-color);
+}
+
+.profileModal .ProfileForm table input::placeholder {
+  color: #bdbdbd;
+}
+
+.profileModal .ProfileForm table .icon {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.profileModal .ProfileForm table .submitBtn,
+.profileModal .ProfileForm table .closeBtn {
+  width: 49%;
+  margin: 10px 0 0 0;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.profileModal .ProfileForm table .submitBtn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.profileModal .avatar-upload {
+  position: relative;
+  max-width: 150px;
+  margin: 10px auto;
+}
+
+.profileModal .avatar-upload .avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  z-index: 1;
+}
+
+.profileModal .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+.profileModal .avatar-upload .avatar-edit input+label {
+  display: inline-block;
+  font-size: 22px;
+  width: 34px;
+  height: 34px;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 0;
+  border-radius: 100%;
+  color: white;
+  background: var(--button-color);
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.profileModal .avatar-upload .avatar-edit input+label:hover {
+  background: var(--button-hover-color);
+  border-color: black;
+}
+
+.profileModal .avatar-upload .avatar-preview {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, rgb(122, 122, 122), white);
+  position: relative;
+  border-radius: 100%;
+  border: 2px solid #000000;
+  box-shadow: inset 0px 0px 10px 2px white;
+  overflow: hidden;
+}
+
+.profileModal .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profileModal .avatar-upload .avatar-preview .defaultUser {
+  width: 100%;
+  height: 100%;
+}
+
+.profileModal .avatar-upload .avatar-preview .defaultUser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileModal .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+.profileModal .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profileModal .ProfileForm .removeImageBtn {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 16px !important;
+  position: absolute;
+  top: 55%;
+  right: 15%;
+  line-height: 24px !important;
+  background-color: black !important;
+  padding: 0;
+}
+
+.profileModal .avatar-upload .avatar-edit input+label,
+.profileModal .ProfileForm .removeImageBtn {
+  display: inline-block;
+  font-size: 22px;
+  width: 34px;
+  height: 34px;
+  line-height: 39px;
+  text-align: center;
+  margin-bottom: 0;
+  border-radius: 100%;
+  color: white;
+  background: var(--button-color);
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.profileModal .avatar-upload .avatar-edit input+label:hover {
+  background: var(--button-hover-color);
+  border-color: black;
+}
+
+.profileModal .avatar-upload .avatar-preview {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, skyblue, white);
+  position: relative;
+  border-radius: 100%;
+  border: 2px solid #000000;
+  box-shadow: inset 0px 0px 10px 2px white;
+}
+
+.imagePreviewModal .imagePreviewContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePreviewModal .imagePreviewContainer img {
+  width: 50%;
+  height: auto;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0px white;
+  background: linear-gradient(45deg, skyblue, white);
+}
+
+.imagePreviewModal .imagePreviewContainer .closeImagePreview {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  text-align: center;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.profileModal .deleteAccount {
+  margin-top: 15px;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font-family2);
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.4s all;
+}
+
+.profileModal .deleteAccount:hover {
+  text-decoration: underline;
+}
+
+.css-knqc4i-MuiDialogActions-root>:not(style)~:not(style) {
+  color: var(--color-green);
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+/* Responsive */
+
+@media (max-width: 550px) {
+
+  .imagePreviewModal .imagePreviewContainer img {
+    width: 90%;
+  }
+}
+
+@media (max-width:425px) {
+  .profileModal {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profileModal .ProfileForm {
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    overflow: scroll;
+  }
+
+  .profileModal .ProfileForm .closeLink {
+    top: 15px;
+    z-index: 99;
+    background-color: white;
+  }
+
+}

@@ -1,0 +1,158 @@
+body {
+  font-family: var(--font-family);
+}
+
+.forgetotpDetails {
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+}
+
+.forgetotpDetails form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.forgetotpDetails .forgetotpHeading {
+  margin-left: 30px;
+}
+
+.forgetotpDetails .forgetotpForm {
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  box-shadow: inset 0 0 2px 0 #cbcbcb;
+}
+
+.forgetotpDetails .forgetotpForm .loginLink {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 20px;
+  color: black;
+}
+
+.forgetotpDetails .forgetotpForm h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.forgetotpDetails .forgetotpForm p {
+  color: #272727;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 5px 0 0 0;
+}
+
+.forgetotpDetails .forgetotpForm .otpInput {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.forgetotpDetails .forgetotpForm .otpInput input {
+  width: 35px !important;
+  height: 35px !important;
+  margin: 10px !important;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline-color: var(--color-green);
+}
+
+.forgetotpDetails .forgetotpForm .submitBtn {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.forgetotpDetails .forgetotpForm .submitBtn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.forgetotpDetails .resendBtn {
+  background-color: transparent !important;
+  color: black !important;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.forgetotpDetails .errorMessage {
+  bottom: 58px !important;
+  left: 10px;
+  right: 10px;
+  background-color: transparent !important;
+  border: 0 !important;
+  text-align: center;
+
+}
+
+/* Responsive  */
+
+@media (max-width:575px) {
+  .forgetotpDetails {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .forgetotpDetails .forgetotpForm {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .forgetotpDetails .forgetotpHeading {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
+  .forgetotpDetails .forgetotpForm .loginLink {
+    top: 10px;
+    left: 10px;
+  }
+
+  .forgetotpDetails .forgetotpForm .otpInput {
+    flex-wrap: wrap;
+  }
+
+  .forgetotpDetails .forgetotpForm .otpInput input {
+    margin: 5px !important;
+  }
+
+  .forgetotpDetails .forgetotpForm .submitBtn {
+    width: auto !important;
+  }
+}
+
+@media (max-width:300px) {
+  .forgetotpDetails .errorMessage {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width:250px) {
+  .forgetotpDetails .errorMessage {
+    font-size: 10px !important;
+  }
+}

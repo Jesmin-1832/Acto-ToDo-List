@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --button-color: #269df3;
+  --button-hover-color: #0270bf;
+  --color-red: #ff7676;
+  --color-green: #009f23;
+  --color-blue: #44bce2;
+  --color-violet: #9c8bda;
+  --color-yellow: #f7a905;
+  --font-family: "jost";
+  --font-family1: "Nunito", sans-serif;
+  --font-family2: "Roboto Condensed", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App.css */
+.App {
+  overflow: hidden;
+  transition: opacity 0.8s ease-in;
+  opacity: 0;
+}
+
+.App.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.container {
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.d-none {
+  display: none;
+}
+
+.css-zxdg2z {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.css-zxdg2z-overflow {
+  overflow: hidden !important;
+}
+
+::selection {
+  background-color: var(--color-green);
+  color: white;
+}
+
+.errorMessage {
+  color: red !important;
+  text-transform: capitalize;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  position: absolute !important;
+  bottom: -5px !important;
+  right: 10px !important;
+  background-color: white !important;
+  padding: 0 10px !important;
+  border: 1px solid lightgray !important;
+  border-radius: 5px !important;
+  animation: showError 0.5s ease-in-out !important;
+}
+
+.input-error input,
+.input-error2 {
+  border: 1px solid red !important;
+}
+
+.apiErrorMessage {
+  position: absolute !important;
+  top: 0 !important;
+  left: 30% !important;
+  color: red !important;
+  text-transform: capitalize !important;
+  font-weight: 600 !important;
+  animation: showError 0.5s ease-in-out !important;
+}
+
+@keyframes showError {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width:768px) {
+  .css-zxdg2z {
+    height: 90vh !important;
+  }
+}

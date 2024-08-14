@@ -1,0 +1,157 @@
+.addtaskmodal .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999 !important;
+}
+
+.addtaskmodal .modal-overlay .modal-content {
+  background: #fff;
+  border-radius: 10px;
+  width: 500px !important;
+  max-width: 90%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.addtaskmodal .modal-overlay .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.addtaskmodal .modal-overlay .modal-content .modal-header h2 {
+  font-size: 20px;
+}
+
+.addtaskmodal .modal-overlay .modal-content .modal-header .addfavourite {
+  margin-left: 15px;
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: grey;
+  cursor: pointer;
+}
+
+.addtaskmodal .modal-overlay .modal-content .modal-header h4 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: var(--font-family2);
+}
+
+.addtaskmodal .modal-overlay .modal-content .close-button {
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.addtaskmodal .modal-overlay .modal-content .modal-body h3 {
+  font-family: var(--font-family2);
+  text-align: left;
+}
+
+.addtaskmodal .modal-overlay .modal-body .categories {
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.addtaskmodal .modal-overlay .modal-body .categories span {
+  color: grey;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.2s all;
+}
+
+.addtaskmodal .modal-overlay .modal-body .categories h4 {
+  font-size: 14px;
+  font-family: var(--font-family2);
+}
+
+.addtaskmodal .modal-overlay .modal-footer {
+  text-align: center;
+}
+
+.modal-overlay .modal-footer input {
+  cursor: text;
+}
+
+.modal-overlay .modal-footer input,
+.addtaskmodal .modal-overlay .modal-footer textarea {
+  width: 90%;
+  font-size: 16px;
+  font-family: var(--font-family2);
+  background-color: #f4f4f4;
+  border: 1px solid lightgray;
+  margin: 5px auto;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.addtaskmodal .modal-overlay .modal-footer input[type="submit"] {
+  color: white;
+  background-color: var(--color-green);
+  width: 60%;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.addtaskmodal .modal-overlay .modal-footer .addTaskError {
+  top: 30% !important;
+  left: 45% !important;
+  background: white;
+  padding: 0 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.addtaskmodal .modal-overlay .modal-footer .addTaskErrorSidebar {
+  top: 44% !important;
+  left: 50% !important;
+  background: white;
+  padding: 0 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.addtaskmodal .categories .icon1.active span {
+  color: var(--color-violet);
+}
+
+.addtaskmodal .categories .icon2.active span {
+  color: var(--color-yellow);
+}
+
+.addtaskmodal .categories .icon3.active span {
+  color: var(--color-blue);
+}
+
+.addtaskmodal .categories .icon4.active span {
+  color: var(--color-red);
+}
+
+.css-1anqmj6-MuiPopper-root-MuiPickersPopper-root {
+  z-index: 9999 !important;
+}
+
+@media (max-width:500px) {
+  .addtaskmodal .modal-overlay .modal-footer .addTaskError {
+    top: 36% !important;
+    left: 20% !important;
+    font-size: 12px !important;
+  }
+}

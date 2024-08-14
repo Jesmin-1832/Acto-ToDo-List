@@ -1,0 +1,171 @@
+.otherTask {
+    margin: 30px 0;
+}
+
+.otherTask .otherTaskBox {
+    background-color: white;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 5px solid var(--color-red);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.otherTask .otherTaskBox h3 {
+    font-size: 25px;
+    font-weight: normal;
+    font-family: var(--font-family2);
+}
+
+.otherTask .otherTaskBox h6 {
+    font-size: 14px;
+    font-family: var(--font-family1);
+    width: 28px;
+    height: 28px;
+    margin: 0 5px;
+    line-height: 28px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    color: white;
+    background-color: var(--color-red);
+    border-radius: 50%;
+}
+
+.otherTask .otherTaskBox .tasklist {
+    margin: 5px 3px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 5px 0;
+}
+
+.otherTask .otherTaskBox .tasklist p {
+    font-size: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-family2);
+}
+
+.otherTask .otherTaskBox .tasklist.checked p {
+    text-decoration: line-through;
+    color: #616161;
+}
+
+.otherTask .otherTaskBox .tasklist .favoriteicon {
+    font-size: 22px;
+    display: inline-block;
+    color: lightgray;
+    cursor: pointer;
+}
+
+/* Checkbox */
+
+.other-checkbox {
+    display: flex;
+    color: green;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 5px 7px 5px 7px;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .other-checkbox {
+        font-size: 1.25rem;
+    }
+}
+
+.other-checkbox span {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.other-checkbox input[type="checkbox"] {
+    opacity: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.other-checkbox input[type="checkbox"]:checked+span::after {
+    background-color: green;
+}
+
+.other-checkbox input[type="checkbox"]:checked+span {
+    color: green;
+}
+
+.other-checkbox input[type="checkbox"]:hover+span::before {
+    border-color: green;
+}
+
+.other-checkbox input[type="checkbox"]:disabled {
+    opacity: 0.85;
+}
+
+.other-checkbox input[type="checkbox"]:disabled+span {
+    color: #9a9a88;
+}
+
+.other-checkbox span::before {
+    content: "";
+    display: inline-block;
+    border-radius: 3px;
+    background-color: transparent;
+    height: 16px;
+    width: 16px;
+    border: 1px solid black;
+}
+
+.other-checkbox span::after {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 2px;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.favoriteicon.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.listAnimate {
+    animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* responsive  */
+
+@media (max-width:575px) {
+    .otherTask .container {
+        padding: 0 !important;
+    }
+
+    .otherTask .otherTaskBox {
+        width: 95%;
+    }
+}

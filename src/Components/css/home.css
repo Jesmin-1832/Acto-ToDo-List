@@ -1,0 +1,403 @@
+body {
+  background-color: #f8f8f8 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+
+.hometasks {
+  margin-top: 25px;
+}
+
+.hometasks .taskbox {
+  background-color: white;
+  max-height: 450px;
+  margin: 10px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  border-top: 5px solid black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.favoriteicon.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hometasks .businessType {
+  border-color: var(--color-violet);
+}
+
+.hometasks .otherType {
+  border-color: var(--color-red);
+}
+
+.hometasks .callType {
+  border-color: var(--color-yellow);
+}
+
+.hometasks .familyType {
+  border-color: var(--color-blue);
+}
+
+.hometasks .taskbox h3 {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hometasks .taskbox h6 {
+  font-size: 12px;
+  font-family: var(--font-family1);
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  line-height: 25px;
+  text-align: center;
+  text-shadow: 0 0 10px black;
+  color: white;
+  border-radius: 50%;
+}
+
+.hometasks .businessType h6 {
+  background-color: var(--color-violet);
+}
+
+.hometasks .otherType h6 {
+  background-color: var(--color-red);
+}
+
+.hometasks .callType h6 {
+  background-color: var(--color-yellow);
+}
+
+.hometasks .familyType h6 {
+  background-color: var(--color-blue);
+}
+
+.hometasks .taskbox ul {
+  width: 100%;
+  max-height: 350px;
+  margin: 10px 0;
+  overflow: scroll;
+}
+
+.hometasks .taskbox ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.css-179vq5o-MuiPopper-root-MuiTooltip-popper .css-ja5taz-MuiTooltip-tooltip {
+  background-color: #333 !important;
+}
+
+.hometasks .taskbox ul li p {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-family2);
+  word-break: break-word;
+  padding: 0 40px 0 35px;
+  text-align: justify;
+  text-wrap: wrap;
+  overflow-x: scroll;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hometasks .taskbox ul li.checked p {
+  text-decoration: line-through;
+}
+
+.hometasks .taskbox ul li .favoriteicon {
+  position: absolute;
+  top: 5px;
+  right: 2%;
+  font-size: 22px;
+  display: inline-block;
+  color: lightgray;
+  cursor: pointer;
+}
+
+/* Checkbox */
+
+.lns-checkbox {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: flex;
+  color: green;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius: 5px;
+  padding: 5px 7px 5px 7px;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .lns-checkbox {
+    font-size: 1.25rem;
+  }
+}
+
+.lns-checkbox span {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lns-checkbox input[type="checkbox"] {
+  opacity: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.lns-checkbox input[type="checkbox"]:checked+span::after {
+  background-color: green;
+}
+
+.lns-checkbox input[type="checkbox"]:checked+span {
+  color: green;
+}
+
+.lns-checkbox input[type="checkbox"]:hover+span::before {
+  border-color: green;
+}
+
+.lns-checkbox input[type="checkbox"]:disabled {
+  opacity: 0.85;
+}
+
+.lns-checkbox input[type="checkbox"]:disabled+span {
+  color: #9a9a88;
+}
+
+.lns-checkbox span::before {
+  content: "";
+  display: inline-block;
+  border-radius: 3px;
+  background-color: transparent;
+  height: 16px;
+  width: 16px;
+  border: 1px solid black;
+}
+
+.lns-checkbox span::after {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 2px;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* Add Button */
+
+.micro {
+  font-size: 22px;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  transform: translateX(-50%);
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  background-color: var(--button-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.micro:before,
+.micro:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: solid 3px var(--button-color);
+  border-radius: 50%;
+}
+
+.micro:before {
+  animation: ripple 2s linear infinite;
+}
+
+.micro:after {
+  animation: ripple 2s 1s linear infinite;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .lg-w-50 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .md-w-100 {
+    width: 100%;
+  }
+}
+
+.micro.hidden {
+  display: none;
+}
+
+/* Keyframe animation for the list */
+@keyframes listAnimation {
+  0% {
+    transform: translateY(0);
+    /* transform: scale(1); */
+  }
+
+  30% {
+    transform: translateY(-5px);
+    /* transform: scale(0.95); */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* transform: scale(1); */
+  }
+}
+
+/* Apply animation to the list */
+.listAnimate {
+  animation: listAnimation 1s ease-in-out;
+}
+
+/* Style for checked tasks */
+.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Style for favorite icon */
+.favoriteicon {
+  cursor: pointer;
+}
+
+/* Disabled state for favorite icon */
+.favoriteicon.disabled {
+  color: lightgray;
+}
+
+/* Fade in animation */
+.animate__fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframes for fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.empty-date-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: #f9f9f9;
+  object-fit: contain;
+}
+
+.empty-date-image img {
+  object-fit: contain;
+  display: inline-block;
+  height: 100%;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  /* Adjust width as needed */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  /* Position above the item */
+  left: 50%;
+  margin-left: -100px;
+  /* Adjust to center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* responsive  */
+
+@media (max-width:768px) {
+
+  .hometasks .empty-date-image {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+  }
+
+  .hometasks .empty-date-image img {
+    width: 100%;
+  }
+}
+
+@media (max-width:575px) {
+  .hometasks .container {
+    padding: 0 !important;
+  }
+
+}

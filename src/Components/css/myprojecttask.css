@@ -1,0 +1,275 @@
+.userModal {
+  background-color: #000;
+}
+
+.micro {
+  cursor: pointer;
+}
+
+.close-parent {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-popup {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.userModal .modalhead .downloadbutton {
+  background: transparent;
+  border: none;
+  margin: 0 10px;
+  color: black !important;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.userModal .projectTask-inner {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  width: 600px;
+  max-height: 75%;
+  margin: 0 auto;
+  overflow: scroll;
+  padding: 10px 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.userModal .projectTask-inner .tasklist-inner {
+  background: linear-gradient(100deg, #fdfdfd, #ededed);
+  color: black;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.userModal .projectTask-inner .tasklist-inner .checktask {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.userModal .projectTask-inner .tasklist-inner .checktask:before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+.userModal .projectTask-inner .tasklist-inner .checktask:checked {
+  background-color: white;
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container.high .checktask {
+  border: 1px solid var(--color-red);
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container.high .checktask:checked:before {
+  box-shadow: inset 0 0 2px 2px white;
+  background-color: var(--color-red);
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container.medium .checktask {
+  border: 1px solid var(--color-yellow);
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container.medium .checktask:checked:before {
+  box-shadow: inset 0 0 2px 2px white;
+  background-color: var(--color-yellow);
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container.low .checktask {
+  border: 1px solid var(--color-blue);
+}
+
+.userModal .projectTask-inner .tasklist-inner .checkbox-container.low .checktask:checked:before {
+  box-shadow: inset 0 0 2px 2px white;
+  background-color: var(--color-blue);
+}
+
+.userModal .projectTask-inner .tasklist-inner p {
+  display: inline-block;
+  margin: 5px 30px;
+}
+
+.userModal .projectTask-inner .tasklist-inner .editicon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.projecttaskPopup .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projecttask-edit {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.projecttaskPopup .popup-overlay .popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-header {
+  display: block !important;
+  margin-bottom: 10px;
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-header h2 {
+  font-size: 20px;
+  font-family: var(--font-family2);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-header svg {
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body textarea {
+  width: 100%;
+  font-size: 16px;
+  font-family: var(--font-family2);
+  background-color: #f4f4f4;
+  border: 1px solid lightgray;
+  margin: 10px auto;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body h3 {
+  font-size: 15px;
+  color: grey;
+  font-family: var(--font-family1);
+  text-align: start;
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority button {
+  background-color: white;
+  border: 1px solid lightgray;
+  color: black;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority .active:first-child button {
+  border: 1px solid var(--color-red);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority .active:nth-child(2) button {
+  border: 1px solid var(--color-yellow);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority .active:nth-child(3) button {
+  border: 1px solid var(--color-blue);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority .active:first-child button svg {
+  color: var(--color-red);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority .active:nth-child(2) button svg {
+  color: var(--color-yellow);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-body .priority .active:nth-child(3) button svg {
+  color: var(--color-blue);
+}
+
+.projecttaskPopup .popup-overlay .popup-content .modal-footer input {
+  width: 100%;
+  border-radius: 30px;
+  color: white;
+  background-color: var(--color-green);
+  cursor: pointer;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* Responsive  */
+
+@media (max-width:768px) {
+  .userModal .projectTask-inner {
+    width: 90%;
+  }
+
+  .userModal .projectTask-inner img {
+    width: 100%;
+  }
+
+  .userModal .projectTask-inner .tasklist-inner p {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width:320px) {
+  .userModal .modalContent .modalhead h3 {
+    font-size: 16px;
+  }
+}

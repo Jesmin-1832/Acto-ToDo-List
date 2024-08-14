@@ -1,0 +1,215 @@
+.userModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 9999;
+}
+
+.userModal.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.userModal .modalContent {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.userModal .modalhead {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  z-index: 9;
+}
+
+.userModal .closeButton {
+  margin-left: -10px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0 10px;
+  color: black !important;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.userModal .modalContent .charts {
+  height: 100%;
+}
+
+.userModal .modalContent .pieChart .pieCircle {
+  width: 205px;
+  height: 205px;
+  margin: 10px;
+  position: relative;
+}
+
+.userModal .modalContent .charts .barsChart,
+.userModal .modalContent .charts .pieChart {
+  margin: 10px;
+  padding-top: 12%;
+  overflow: hidden;
+}
+
+.userModal .modalContent .charts h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.userModal .modalContent .charts .barsChart .chart-inner,
+.userModal .modalContent .charts .pieChart .chart-inner {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.userModal .modalContent .charts .barsChart .chart-inner>div {
+  height: 450px !important;
+}
+
+.userModal .modalContent .charts .pieChart .chart-inner p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family2);
+}
+
+.userModal .modalContent .charts .pieChart .chart-inner span {
+  display: inline-block;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-family: var(--font-family2);
+}
+
+.canvasjs-chart-credit {
+  display: none;
+}
+
+.canvasjs-chart-canvas {
+  border-radius: 10px;
+}
+
+/* Responsive */
+
+@media (max-width:1024px) {
+  .lg-w-100 {
+    width: 100%;
+  }
+
+  .userModal .modalContent {
+    overflow: scroll;
+  }
+
+  .userModal .modalContent .charts .barsChart,
+  .userModal .modalContent .charts .pieChart {
+    height: auto;
+    padding-top: 70px;
+  }
+
+  .userModal .modalContent .charts .pieChart {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width:941px) {
+
+  .userModal .modalContent .pieChart .pieCircle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width:861px) {
+
+  .userModal .modalContent .pieChart .pieCircle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width:625px) {
+  .userModal .modalContent .charts .barsChart .chart-inner>div {
+    height: 400px !important;
+  }
+
+  .userModal .modalContent .pieChart .pieCircle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width:500px) {
+  .userModal .modalContent .charts .barsChart .chart-inner>div {
+    height: 350px !important;
+  }
+}
+
+@media (max-width:462px) {
+  .userModal .modalContent .charts .barsChart .chart-inner {
+    padding: 10px;
+  }
+
+  .userModal .modalContent .charts .barsChart .chart-inner>div {
+    height: 300px !important;
+  }
+
+  .userModal .modalContent .pieChart .pieCircle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width:410px) {
+  .userModal .modalContent .charts .barsChart .chart-inner>div {
+    height: 250px !important;
+  }
+
+  .userModal .modalContent .pieChart .pieCircle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .userModal .modalContent .pieChart .pieCircle span {
+    font-size: 14px !important;
+  }
+
+}
+
+@media (max-width:342px) {
+  .userModal .modalContent .pieChart .pieCircle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width:320px) {
+  .userModal .modalContent .charts .barsChart .chart-inner {
+    padding: 10px 5px;
+  }
+
+  .userModal .modalContent .charts .barsChart .chart-inner>div {
+    height: 200px !important;
+  }
+}

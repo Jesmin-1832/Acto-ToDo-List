@@ -1,0 +1,93 @@
+.calendar-main .rs-calendar {
+  width: 500px;
+}
+
+.calendar-main .rs-calendar-header-backward,
+.calendar-main .rs-calendar-header-forward {
+  display: none;
+}
+
+.calendar-main .calendar-popup .calendar-controls button {
+  background-color: white !important;
+  color: black !important;
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  padding: 0 !important;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9;
+  transition: 0.2s all;
+}
+
+.calendar-main .calendar-popup .calendar-controls button:hover {
+  background-color: rgb(237, 237, 237) !important;
+}
+
+.calendar-main .calendar-popup .calendar-controls button:last-child {
+  left: 130px !important;
+}
+
+.calendar-main .calendar-popup .calendar-controls button svg {
+  margin-top: 5px;
+}
+
+.calendar-main .calendar-popup .rs-calendar-header-title {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+
+.calendar-main .rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
+  background-color: black !important;
+}
+
+.calendar-main .rs-calendar-panel.rs-calendar-compact .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
+  position: relative;
+  border-radius: 10px;
+}
+
+.calendar-main .rs-calendar-panel .rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+  box-shadow: inset 0 0 0 1px black !important;
+}
+
+.calendar-main .rs-badge-independent.rs-badge-dot {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Responsive  */
+
+@media (max-width:1024px) {
+  .calendar-main .rs-calendar {
+    width: 450px;
+  }
+}
+
+@media (max-width:768px) {
+  .calendar-main .rs-calendar {
+    width: 400px;
+  }
+}
+
+@media (max-width:575px) {
+  .calendar-main .rs-calendar {
+    width: 350px;
+  }
+}
+
+@media (max-width:425px) {
+  .calendar-main .rs-calendar {
+    width: 300px;
+  }
+}
+
+@media (max-width:325px) {
+  .calendar-main .rs-calendar {
+    width: 250px;
+  }
+}

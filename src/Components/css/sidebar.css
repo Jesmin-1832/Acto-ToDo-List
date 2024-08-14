@@ -1,0 +1,497 @@
+body {
+  font-family: var(--font-family) !important;
+}
+
+.sidebar .css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
+  width: 250px !important;
+  /* height: 100vh; */
+}
+
+.sidebar .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  justify-content: space-between;
+}
+
+.sidebar .ActiveBtn:first-child {
+  background-color: #ddf5df !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.sidebar .ActiveBtn:first-child:hover {
+  background-color: #ddf5df !important;
+}
+
+.sidebar .css-13wkwlv-MuiListItemIcon-root {
+  font-size: 24px;
+}
+
+.sidebar .css-h4y409-MuiList-root {
+  max-height: 320px;
+  overflow: scroll;
+  box-shadow: inset 0 -5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .css-h4y409-MuiList-root :nth-child(1) .css-13wkwlv-MuiListItemIcon-root {
+  color: #525350;
+}
+
+.sidebar .css-h4y409-MuiList-root :nth-child(2) .css-13wkwlv-MuiListItemIcon-root {
+  color: var(--color-violet) !important;
+}
+
+.sidebar .css-h4y409-MuiList-root :nth-child(3) .css-13wkwlv-MuiListItemIcon-root {
+  color: var(--color-yellow) !important;
+}
+
+.sidebar .css-h4y409-MuiList-root :nth-child(4) .css-13wkwlv-MuiListItemIcon-root {
+  color: var(--color-blue) !important;
+}
+
+.sidebar .css-h4y409-MuiList-root :nth-child(5) .css-13wkwlv-MuiListItemIcon-root {
+  color: var(--color-red) !important;
+}
+
+.sidebar .css-tlelie-MuiListItemText-root .css-10hburv-MuiTypography-root {
+  color: black !important;
+  margin-left: 45px !important;
+  font-size: 14px !important;
+  text-transform: capitalize;
+  margin-right: 20px;
+  text-wrap: balance;
+}
+
+.sidebar .css-p55zm9-MuiButtonBase-root-MuiIconButton-root {
+  position: fixed !important;
+  top: 10px !important;
+  left: 25px !important;
+  z-index: 9999 !important;
+  background-color: White !important;
+}
+
+.sidebar .css-p55zm9-MuiButtonBase-root-MuiIconButton-root:hover {
+  background-color: white !important;
+}
+
+.sidebar .closeBtn {
+  border: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 250px !important;
+  opacity: 0;
+  transition: 0.5s all !important;
+  pointer-events: none;
+}
+
+.sidebar .closeBtn svg {
+  color: black !important;
+  background-color: white;
+  transform: scale(1.1);
+  margin-top: 2px;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 2px solid white !important;
+  border-radius: 0 5px 5px 0 !important;
+  transition: 0.5s all !important;
+}
+
+.sidebar .closeBtn:hover svg {
+  color: black !important;
+}
+
+.css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper .closeBtn {
+  transition: 0.5s all;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover {
+  border: none !important;
+}
+
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root .css-i4bv87-MuiSvgIcon-root {
+  display: none;
+}
+
+.css-1hsz34s-MuiDrawer-docked .css-78trlr-MuiButtonBase-root-MuiIconButton-root .css-i4bv87-MuiSvgIcon-root {
+  opacity: 1 !important;
+  display: block;
+  font-size: 25px !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: 25px !important;
+  color: black !important;
+}
+
+.css-79ws1d-MuiModal-root {
+  z-index: 9999 !important;
+}
+
+.sidebar .weeklyreport {
+  display: flex;
+  position: relative;
+  margin: 10px 8px 10px 10px;
+  border: 1px solid lightgray;
+  padding: 4px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar .weeklyreport p {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 12px;
+  color: darkgreen;
+}
+
+.sidebar .weeklyreport span {
+  margin-left: 55px;
+}
+
+.sidebar .addcategory {
+  cursor: pointer;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.sidebar .addcategory svg {
+  color: rgb(43, 160, 37);
+  font-size: 24px;
+}
+
+.sidebar .myprojectBtn,
+.sidebar .addcategory {
+  display: block !important;
+  margin: 10px 0 0 0 !important;
+  padding: 8px 22px !important;
+  font-size: 25px !important;
+}
+
+.sidebar .myprojectBtn svg {
+  color: teal;
+  font-size: 24px;
+}
+
+.sidebar .myprojectBtn svg:last-child,
+.sidebar .addcategory svg:last-child {
+  color: black !important;
+}
+
+.sidebar .logoutBtn,
+.sidebar .myprojectBtn,
+.sidebar .addcategory {
+  margin: 10px 0;
+  padding: 10px 25px;
+  color: black;
+  font-size: 20px;
+  text-align: start;
+  position: relative;
+  transition: 0.2s all;
+  background-color: white;
+}
+
+.sidebar .logoutBtn:hover,
+.sidebar .myprojectBtn:hover,
+.sidebar .addcategory:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logoutBtn:active,
+.sidebar .myprojectBtn:active,
+.sidebar .addcategory:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .myprojectBtn span {
+  font-size: 20px !important;
+}
+
+.sidebar .logoutBtn span,
+.sidebar .myprojectBtn span,
+.sidebar .addcategory span {
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+  margin: 16px 0 0 20px;
+  padding: 0;
+  position: absolute;
+  top: -10%;
+}
+
+.sidebar .myprojectTitle ul {
+  margin: 8px;
+  margin-top: 0;
+  color: black !important;
+  font-size: 18px !important;
+  max-height: 120px;
+  overflow: scroll;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.sidebar .myprojectTitle ul li {
+  position: relative;
+  margin: 5px 5px 5px 8px;
+  border: 1px solid lightgray;
+  padding: 4px 0px;
+  border-radius: 10px;
+}
+
+.sidebar .myprojectTitle ul li p {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  margin: 0 5px;
+  color: black;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sidebar .myprojectTitle ul li span {
+  font-size: 14px;
+  width: 140px !important;
+  margin-left: 50px;
+  padding-right: 5px;
+  display: inline-block;
+  text-wrap: wrap;
+  text-align: justify;
+  font-family: "Roboto Condensed";
+  word-break: break-word;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar .myprojectTitle ul li h6 {
+  position: absolute;
+  top: -3px;
+  left: 100%;
+  font-size: 20px;
+  text-wrap: nowrap;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sidebar .myprojectTitle ul li .changeBox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  text-align: center;
+  background-color: White;
+  z-index: 99;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.sidebar .myprojectTitle ul li .changeBox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar .changeCategory {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transform: translate(0, -50%);
+  display: flex;
+  text-align: center;
+  background-color: White;
+  z-index: 99;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  width: auto;
+}
+
+.sidebar .css-2dum1v-MuiDrawer-docked .MuiDrawer-paper .changeCategory {
+  display: none;
+}
+
+.sidebar .myprojectTitle ul li .changeBox span,
+.sidebar .changeCategory span {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  padding: 5px !important;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.sidebar .myprojectTitle ul li .changeBox span:hover,
+.sidebar .changeCategory span:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .myprojectTitle ul li .changeBox span svg,
+.sidebar .changeCategory span svg {
+  font-size: 20px !important;
+  color: blue !important;
+}
+
+.sidebar .myprojectTitle ul li .changeBox span:last-child svg,
+.sidebar .changeCategory span:last-child svg {
+  color: red !important;
+}
+
+@media (max-width: 768px) {
+  .css-p55zm9-MuiButtonBase-root-MuiIconButton-root {
+    left: 20px !important;
+  }
+}
+
+.sidebar .css-1r9jet7 {
+  position: relative;
+}
+
+.sidebar .css-1r9jet7 .userDetails {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.sidebar .css-1hsz34s-MuiDrawer-docked .userDetails {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .userDetails .userImage {
+  font-size: 24px;
+  width: 35px;
+  height: 35px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgb(122, 122, 122), white);
+  cursor: pointer;
+}
+
+.sidebar .userDetails .userImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.sidebar .userDetails .userImage svg {
+  color: white !important;
+}
+
+.sidebar .userDetails .username {
+  text-align: left;
+  margin-left: 10px;
+  line-height: 18px;
+}
+
+.sidebar .userDetails p {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.sidebar .userDetails span {
+  font-size: 12px !important;
+  display: inline-block;
+}
+
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover {
+  background-color: transparent !important;
+}
+
+.sidebar .userDetails p,
+.sidebar .userDetails span {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* CATEGORY  */
+
+.sidebar .categoryList .css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root {
+  cursor: default !important;
+}
+
+.sidebar .categoryList .category-initial {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  border: 1px solid grey;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  font-family: var(--font-family2);
+  position: absolute;
+  top: 12px;
+  left: 22px;
+}
+
+.sidebar .categoryList .css-1smpi6m-MuiListItemIcon-root {
+  margin: 0 !important;
+}
+
+.sidebar .categoryList .categoryTaskIcon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar .css-2dum1v-MuiDrawer-docked .MuiDrawer-paper .categoryList .categoryTaskIcon {
+  display: none;
+}
+
+/* Responsive  */
+
+@media (max-width:768px) {
+  .sidebar .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    left: -100px;
+  }
+
+  .sidebar .css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
+    left: 0;
+  }
+
+  .sidebar .css-k008qs {
+    display: block;
+  }
+}
+
+@media (max-width: 250px) {
+  .sidebar .closeBtn {
+    left: 0 !important;
+  }
+
+  .sidebar .css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
+    width: 100% !important;
+  }
+
+  .sidebar .myprojectTitle ul li h6 {
+    left: auto;
+    right: 10%;
+  }
+}

@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.forgetDetails {
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+}
+
+.forgetDetails .forgetForm {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: white;
+  box-shadow: inset 0 0 2px 0 #cbcbcb;
+}
+
+.forgetDetails .forgetForm h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.forgetDetails .forgetForm p {
+  color: #272727;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 5px 0 20px 0;
+}
+
+.forgetDetails .forgetForm table tr td {
+  text-align: center;
+  position: relative;
+}
+
+.forgetDetails .forgetForm table input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 10px;
+  outline: none;
+  caret-color: var(--button-color);
+}
+
+.forgetDetails .forgetForm table input::placeholder {
+  color: #bdbdbd;
+}
+
+.forgetDetails .forgetForm table .icon {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.forgetDetails .forgetForm table .show-hide {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.forgetDetails .forgetForm table span {
+  color: #7c7b7b;
+  display: flex;
+  max-width: 90%;
+  margin: 20px auto;
+  align-items: center;
+  text-align: center;
+}
+
+.forgetDetails .forgetForm table .forgetBtn {
+  margin: 30px 0 20px 0;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.forgetDetails .forgetForm table .forgetBtn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.forgetForm .forgetlink {
+  text-align: center;
+}
+
+.forgetForm .forgetlink a {
+  color: var(--button-color);
+}
+
+.forgetDetails .forgetForm table .errorMessage {
+  bottom: -25px !important;
+}
+
+.forgetDetails .forgetForm table .apiErrorMessage {
+  top: -25px !important;
+  left: 10% !important;
+}
+
+.forgetDetails .forgetForm table .passwordnotmatch {
+  left: 0;
+  right: 0 !important;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+/* Responsive  */
+
+@media (max-width:991px) {
+  .forgetDetails {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+}
+
+@media (max-width:575px) {
+  .forgetDetails {
+    width: 100%;
+  }
+
+  .forgetDetails .forgetForm {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width:300px) {
+  .forgetDetails .forgetForm table .passwordnotmatch {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width:250px) {
+  .forgetDetails .forgetForm table .passwordnotmatch {
+    font-size: 10px !important;
+  }
+}

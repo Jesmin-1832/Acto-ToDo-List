@@ -1,0 +1,265 @@
+.Starmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 99999;
+}
+
+.Starmodal.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.Starmodal .modalContent {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Starmodal .modalhead {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.Starmodal .closeButton {
+  margin-left: -10px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.Starmodal .projectTask-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 80px;
+}
+
+.Starmodal .tasklist-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  color: black;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.Starmodal .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.Starmodal .checktask {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Starmodal .checktask:before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+.Starmodal .tasklist-inner1 p {
+  display: inline-block;
+  margin: 5px 30px;
+}
+
+.Starmodal .projectTasks {
+  width: 90%;
+  margin: 0 auto;
+  overflow: scroll;
+  padding: 10px 15px;
+  border-radius: 10px;
+
+}
+
+.Starmodal .projectTask-inner1 .favoriteicon {
+  position: absolute;
+  top: 5px;
+  right: 2%;
+  font-size: 24px;
+  display: inline-block;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.Starmodal .favoriteicon.disabled {
+  color: lightgray;
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.Starmodal .favoriteicon {
+  transition: color 0.3s ease;
+}
+
+.Starmodal .favoriteicon.animate__fadeInUp {
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Starmodal .taskCategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Starmodal .taskbox {
+  flex: 1 1 22%;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: max-content;
+}
+
+.Starmodal .taskbox h3 {
+  margin-bottom: 10px;
+}
+
+.Starmodal .tasklistbox {
+  max-height: 350px;
+  overflow: scroll;
+}
+
+.Starmodal .tasklist-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.Starmodal .taskbox.business {
+  border-color: 1px solid #9c8bda;
+}
+
+.Starmodal .taskbox.call {
+  border-color: 1px solid #f7a905;
+}
+
+.Starmodal .taskbox.family {
+  border-color: 1px solid #44bce2;
+}
+
+.Starmodal .taskbox.other {
+  border-color: 1px solid #ff7676;
+}
+
+.Starmodal .nofavoritetask {
+
+  color: red;
+}
+
+.Starmodal .nofavorite-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+}
+
+/* Define the list animation */
+@keyframes listAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to the list */
+.listAnimate {
+  animation: listAnimation 0.8s ease-in-out;
+}
+
+/* Style for checked tasks */
+.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Style for favorite icon */
+.favoriteicon {
+  cursor: pointer;
+}
+
+/* Fade in animation */
+.animate__fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframes for fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

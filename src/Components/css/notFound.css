@@ -1,0 +1,33 @@
+.pageNotfound {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+    text-align: center;
+    cursor: no-drop;
+    user-select: none;
+}
+
+.pageNotfound h2 {
+    font-size: 80px;
+    font-weight: 500;
+    font-family: var(--font-family2);
+}
+
+.pageNotfound h3 {
+    font-size: 25px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.pageNotfound a {
+    color: var(--button-hover-color);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.pageNotfound a:hover {
+    color: black;
+}
